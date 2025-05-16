@@ -34,7 +34,6 @@ class EmailRequest(BaseModel):
     rooms: int
     days: int
     people: int
-    message: str
     comments: str
 
 
@@ -62,7 +61,7 @@ async def send_email(email_data: EmailRequest, background_tasks: BackgroundTasks
     <h3> Number of Rooms: {email_data.rooms} </h3>
     <h3> Number of Days to Stay: {email_data.days} </h3>
     <h3> Number of People: {email_data.people} </h3>
-    <h3> Comments: {email_data.comments}
+    <h3> Comments: {email_data.comments} </h3>
     """
 
         message = MessageSchema(

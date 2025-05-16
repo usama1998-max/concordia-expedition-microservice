@@ -16,7 +16,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://www.concordiaexpedition.com/"],  # Update if deployed
+    allow_origins=["*"],  # Update if deployed
     allow_credentials=True,
     allow_methods=["POST"],
     allow_headers=["*"],
